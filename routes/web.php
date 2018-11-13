@@ -1,6 +1,7 @@
 <?php
 
 use App\Cat;
+use App\Hamster;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,5 +29,19 @@ Route::get('/cats', function () {
 
     Cat::create(
         ['info' => json_encode(['name' => 'Igor', 'long-hair' => true])]
+    );
+});
+
+Route::get('/hamsters', function () {
+    Hamster::create(
+        ['name' => 'Fluffy']
+    );
+
+    Hamster::create(
+        ['name' => 'Furball']
+    );
+
+    Hamster::create(
+        ['name' => 'Igor']
     );
 });
