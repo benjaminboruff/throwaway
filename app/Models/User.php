@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -57,6 +57,6 @@ class User extends Authenticatable
 
     public function hamsters()
     {
-        return $this->hasMany('App\Hamster');
+        return $this->belongsToMany('App\Models\Hamster')->withPivot('role');
     }
 }

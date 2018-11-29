@@ -12,14 +12,14 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        \App\User::truncate();
+        \App\Models\User::truncate();
 
-        \App\User::create([
+        \App\Models\User::create([
             'name'     => 'Jimmy',
             'email'    => 'jim@example.com',
             'password' => Hash::make('password')
         ]);
-        \App\User::create([
+        \App\Models\User::create([
             'name'     => 'Sharon',
             'email'    => 'sharon@example.com',
             'password' => Hash::make('password')

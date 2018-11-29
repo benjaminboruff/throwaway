@@ -1,7 +1,7 @@
 <?php
 
 use App\Cat;
-use App\Hamster;
+use App\Models\Hamster;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,14 +34,14 @@ Route::get('/cats', function () {
 
 Route::get('/hamsters', function () {
     Hamster::create(
-        ['name' => 'Fluffy']
+        ['name' => 'Fluffy', 'user_id' => 1]
     );
 
     Hamster::create(
-        ['name' => 'Furball']
+        ['name' => 'Furball', 'user_id' => 1]
     );
 
     Hamster::create(
-        ['name' => 'Igor']
+        ['name' => 'Igor', 'user_id' => 1]
     );
 });
